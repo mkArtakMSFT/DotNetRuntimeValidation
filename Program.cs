@@ -3,9 +3,11 @@ try
     WebApplication.Create();
 
     Console.WriteLine("Runtime validation success.");
+    return 0;
 }
-catch
+catch (Exception ex)
 {
     Console.WriteLine("Runtime validation failure.");
-    throw;
+    Console.WriteLine(ex.Message);
+    return 1;
 }
